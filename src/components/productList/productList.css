@@ -1,0 +1,24 @@
+.products {
+  margin: 1rem auto;
+}
+.products h3 {
+  margin: 1rem auto;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.products-list button {
+  background-color: #eee;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.products-list button.selected {
+  background-color: #bde0fe;
+}

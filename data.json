@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "Chips", "price": 25 },
+  { "id": 2, "name": "Soda", "price": 40 },
+  { "id": 3, "name": "Chocolate", "price": 50 },
+  { "id": 4, "name": "Cookies", "price": 30 },
+  { "id": 5, "name": "Gum", "price": 5 },
+  { "id": 6, "name": "Juice Box", "price": 35 },
+  { "id": 7, "name": "Trail Mix", "price": 45 },
+  { "id": 8, "name": "Water Bottle", "price": 20 },
+  { "id": 9, "name": "Granola Bar", "price": 15 },
+  { "id": 10, "name": "Energy Drink", "price": 60 }
+]
