@@ -41,3 +41,7 @@
 .vendor .success {
   color: green;
 }
+
+.vendor .info {
+  color: rgb(0, 102, 255);
+}

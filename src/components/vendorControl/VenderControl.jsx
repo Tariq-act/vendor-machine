@@ -4,7 +4,7 @@ import { useGlobalState } from "../../context";
 import "./vendorControl.css";
 
 const VenderControl = () => {
-  const { selectedProduct, insertMoney, message, insertedAmount } =
+  const { selectedProduct, insertMoney, message, insertedAmount, refund } =
     useGlobalState();
   const denominations = [1, 2, 5, 10, 20, 50, 100];
 
@@ -40,6 +40,12 @@ const VenderControl = () => {
               {amount}
             </button>
           ))}
+        </div>
+
+        {message.type === "info" && <p className="info">{message.text}</p>}
+
+        <div>
+          <button onClick={refund}>Cancel / Refund</button>
         </div>
       </div>
     </div>

@@ -13,10 +13,6 @@ const StateProvider = ({ children }) => {
   const [message, setMessage] = useState("");
   const [changeGiven, setChangeGiven] = useState([]);
 
-  useEffect(() => {
-    getData(setProducts, setMessage);
-  }, []);
-
   // @Select Product
   const chooseProduct = (product) => {
     setSelectedProduct(product);
@@ -72,17 +68,41 @@ const StateProvider = ({ children }) => {
     }
   };
 
+  // @refund
+  const refund = () => {
+    if (insertedAmount === 0) {
+      setMessage({ type: "info", text: "No money to refund." });
+      return;
+    }
+
+    const refundChange = calculateChange(insertedAmount, validDenominations);
+
+    setMessage({
+      type: "info",
+      text: `Purchase canceled. Refunded ₹${refundChange.join(",")}.`,
+    });
+
+    setChangeGiven(refundChange);
+    setInsertedAmount(0);
+    setSelectedProduct(null);
+  };
+
+  useEffect(() => {
+    getData(setProducts, setMessage);
+  }, []);
+
   return (
     <StateContext.Provider
       value={{
         products,
-        setProducts,
-        insertMoney,
         message,
-        changeGiven,
-        chooseProduct,
         selectedProduct,
+        insertMoney,
+        changeGiven,
+        setProducts,
         insertedAmount,
+        chooseProduct,
+        refund,
       }}
     >
       {children}
