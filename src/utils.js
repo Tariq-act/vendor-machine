@@ -1,9 +1,10 @@
-export const getData = (setProducts) => {
+export const getData = (setProducts, setMessage) => {
   fetch("/data.json")
     .then((res) => res.json())
     .then((data) => setProducts(data))
     .catch((err) => {
-      throw new Error("Failed to load products.", err);
+      console.error("Fetch failed:", err);
+      setMessage({ type: "error", text: "Failed to load products." });
     });
 };
 
