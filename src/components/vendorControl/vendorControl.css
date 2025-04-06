@@ -1,3 +1,4 @@
+/* Container centers the vendor UI */
 .container {
   width: 100%;
   display: flex;
@@ -5,6 +6,7 @@
   justify-content: center;
 }
 
+/* Vendor box styling */
 .vendor {
   display: flex;
   flex-direction: column;
@@ -14,8 +16,12 @@
   width: fit-content;
   padding: 1rem;
   gap: 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* Denomination buttons container */
 .vendor .amounts {
   display: flex;
   flex-wrap: wrap;
@@ -24,6 +30,7 @@
   justify-content: center;
 }
 
+/* Button style */
 .vendor button {
   padding: 10px 15px;
   font-size: 16px;
@@ -34,14 +41,22 @@
   transition: all 0.2s ease;
 }
 
+.vendor button:hover {
+  background-color: #eaeaea;
+}
+
+/* Message styles */
 .vendor .error {
   color: red;
+  font-weight: bold;
 }
 
 .vendor .success {
   color: green;
+  font-weight: bold;
 }
 
 .vendor .info {
   color: rgb(0, 102, 255);
+  font-weight: bold;
 }

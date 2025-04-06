@@ -1,12 +1,54 @@
-# React + Vite
+# 🥤 Vending Machine Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple vending machine simulator built with **React** using **Context API** for state management.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse and select from a list of products (Chips, Soda, Chocolate, etc.)
+- Insert money using accepted denominations: 1, 2, 5, 10, 20, 50, 100
+- Automatically purchases item if enough money is inserted
+- Returns extra change in the fewest coins/bills
+- Cancel a transaction and refund inserted money
+- Tracks selected item and inserted amount globally
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+│
+├── public/         # Images or mock JSON data
+├── components/     # Reusable components
+├── context.jsx     # Context API for global state
+├── utils/          # Utility functions
+└── App.jsx         # Main app logic
+```
+
+## 🧑‍💻 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Tariq-act/vendor-machine.git
+cd vending-machine-app
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the app locally
+
+```bash
+npm run dev
+```
+
+The app will run on `http://localhost:5173`.
+
+## ⚠️ Notes
+
+- Make sure `data.json` (product list) is placed inside the `public/` folder for correct fetch during production/deployment (especially on Vercel).
+- Refund option is only available **before** the item is purchased.
+
+---

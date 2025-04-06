@@ -20,7 +20,12 @@ const ProductList = () => {
                 : ""
             }
           >
-            {product.name} - {product.price} ₹
+            <div>
+              <p>
+                <strong>{product.name}</strong>
+              </p>
+              <p>₹ {product.price}</p>
+            </div>
           </button>
         ))}
       </div>
